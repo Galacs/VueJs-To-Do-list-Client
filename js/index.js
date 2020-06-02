@@ -14,13 +14,13 @@ var todos = new Vue({
 var buttons = new Vue({
     el: "#Buttons",
     methods: {
-      addToDo: function(){
+      addToDo(){
         const todo = prompt("Tache a faire:");
         if(todo === '') return;
         todos.todos.push(todo)
         console.log(todos.todos.length);
       },
-      ClearTodos: function(){
+      ClearTodos(){
         todos.todos = []
         console.log(todos.todos.length);
       }
