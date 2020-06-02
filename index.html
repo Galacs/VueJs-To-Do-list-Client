@@ -14,15 +14,15 @@
         display: none;
       }
     </style>
-    <div class="button-box">
+    <div class="button-box" id="Buttons">
       <p style="text-align: center;">
-        <button onclick="addToDo()" title="Ajouter un element a votre To Do liste" type="button" class="btn btn-info btn-circle btn-xl AddToDoButton">
+        <button v-on:click="addToDo()" title="Ajouter un element a votre To Do liste" type="button" class="btn btn-info btn-circle btn-xl AddToDoButton">
           <svg class="bi bi-plus" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
             <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
           </svg>
         </button>
-      <button onclick="ClearTodos()" type="button" title="Supprimer tout les elements de votre to do liste" class="btn btn-warning btn-circle btn-xl">
+      <button v-on:click="ClearTodos()" type="button" title="Supprimer tout les elements de votre to do liste" class="btn btn-warning btn-circle btn-xl">
         <svg class="bi bi-x" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
           <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
