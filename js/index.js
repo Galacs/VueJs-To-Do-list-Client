@@ -4,10 +4,10 @@ var todos = new Vue({
       todos: []
     },
     methods: {
-      DeleteToDo(todo){
+      DeleteToDo: function(todo){
         this.todos.splice(this.todos.indexOf(todo), 1);
         console.log(todos.todos.length);
-      }
+      },
     }
   })
 
