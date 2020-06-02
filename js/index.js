@@ -12,7 +12,9 @@ var todos = new Vue({
   })
 
 function addToDo(){
-    todos.todos.push(prompt("Tache a faire:"));
+    const todo = prompt("Tache a faire:");
+    if(todo === '') return;
+    todos.todos.push(todo)
     console.log(todos.todos.length);
 }
 
