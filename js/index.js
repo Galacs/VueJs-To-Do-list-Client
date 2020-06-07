@@ -1,35 +1,28 @@
-var todos = new Vue({
-    el: '#Todos',
-    data: {
-      todos: []
+var app = new Vue({
+  el: '#app',
+  data: {
+    todos: []
+  },
+  methods: {
+    DeleteToDo: function(todo){
+      this.todos.splice(this.todos.indexOf(todo), 1);
+      console.log(this.todos.length);
     },
-    methods: {
-      DeleteToDo: function(todo){
-        this.todos.splice(this.todos.indexOf(todo), 1);
-        console.log(todos.todos.length);
-      },
-    }
-})
-
-var buttons = new Vue({
-    el: "#Buttons",
-    methods: {
-      addToDo(){
-        const todo = prompt("Tache a faire:");
-        if(todo === '') return;
-        todos.todos.push(todo)
-        console.log(todos.todos.length);
-      },
-      ClearTodos(){
-        todos.todos = []
-        console.log(todos.todos.length);
+    addToDo(){
+      const todo = prompt("Tache a faire:");
+      if(todo === '') return;
+      this.todos.push(todo)
+      console.log(this.todos.length);
+    },
+    ClearTodos(){
+      this.todos = []
+      console.log(this.todos.length);
+    },
+    ManualaddToDo(name, number = 1){
+      for (let i = 0; i < number; i++) {
+        this.todos.push(name);
       }
+      console.log(this.todos.length);
     }
-})
-
-function ManualaddToDo(name, number = 1){
-  for (let i = 0; i < number; i++) {
-    todos.todos.push(name);
   }
-  console.log(todos.todos.length);
-}
+})
