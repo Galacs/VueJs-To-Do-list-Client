@@ -26,7 +26,7 @@ var app = new Vue({
     ManualaddToDo(name, number = 1){
       for (let i = 0; i < number; i++) {
         this.todos.push({
-          text: todo,
+          text: name,
           id: this.id
         })
         this.id++;
