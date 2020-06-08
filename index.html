@@ -33,9 +33,9 @@
     </div>
       <div v-cloak>      
         <ol>
-          <li v-for="todo in todos">
+          <li v-bind:key="todo.id" v-for="todo in todos">
             <div class="flex-container">
-              <p>{{ todo }}</p>
+              <p>{{ todo.text }}</p>
               <button v-on:click="DeleteToDo(todo)" style="padding: 0 0; align-self: flex-end; height: auto; width: 5%; min-width: 30px;" type="button" class="btn btn-warning btn-circle btn-lg">
                 <svg class="bi bi-x" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>

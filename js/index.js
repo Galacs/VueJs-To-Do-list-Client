@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#app',
   data: {
-    todos: []
+    todos: [],
+    id: 1
   },
   methods: {
     DeleteToDo: function(todo){
@@ -11,7 +12,11 @@ var app = new Vue({
     addToDo(){
       const todo = prompt("Tache a faire:");
       if(todo === '') return;
-      this.todos.push(todo)
+      this.todos.push({
+        text: todo,
+        id: this.id
+      })
+      this.id++;
       console.log(this.todos.length);
     },
     ClearTodos(){
@@ -20,7 +25,11 @@ var app = new Vue({
     },
     ManualaddToDo(name, number = 1){
       for (let i = 0; i < number; i++) {
-        this.todos.push(name);
+        this.todos.push({
+          text: todo,
+          id: this.id
+        })
+        this.id++;
       }
       console.log(this.todos.length);
     }
